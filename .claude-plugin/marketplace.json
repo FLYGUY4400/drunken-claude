@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-marketplace.json",
+  "name": "drunken-claude",
+  "description": "Give Claude a drink and watch its tone get progressively more unhinged. Purely tonal - never sacrifices task correctness.",
+  "owner": {
+    "name": "FLYGUY4400"
+  },
+  "plugins": [
+    {
+      "name": "drunken-claude",
+      "description": "/drink <name> to get Claude buzzed, tipsy, drunk, or blackout-chaotic. /sober-up to bring it back down.",
+      "source": "./",
+      "category": "fun"
+    }
+  ]
+}

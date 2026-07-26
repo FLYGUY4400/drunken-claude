@@ -1,0 +1,8 @@
+{
+  "name": "drunken-claude",
+  "version": "0.1.0",
+  "description": "Give Claude a drink with /drink <name> and watch it get progressively more unhinged. /sober-up brings it back down. Purely tonal — never sacrifices task correctness.",
+  "author": {
+    "name": "Dawson Bremner"
+  }
+}
