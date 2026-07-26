@@ -1,6 +1,7 @@
 ---
 description: Give Claude a drink. Intoxication rises and its tone gets progressively more unhinged (never less correct).
 argument-hint: <drink name, e.g. beer, wine, tequila shot>
+allowed-tools: Read, Write
 ---
 
 The user just ran `/drink $ARGUMENTS`.

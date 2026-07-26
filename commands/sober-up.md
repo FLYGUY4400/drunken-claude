@@ -1,5 +1,6 @@
 ---
 description: Start bringing Claude's intoxication level back down toward sober.
+allowed-tools: Read, Write
 ---
 
 The user just ran `/sober-up`.
