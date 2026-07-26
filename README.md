@@ -1,8 +1,9 @@
 # 🍺 Drunken Claude
 
-A Claude Code plugin that gives your agent a drink. `/drink <name>` raises its
-intoxication level and its tone gets progressively more unhinged - rambling,
-typos, ALL CAPS, tangents, emoji spam. `/sober-up` brings it back down.
+A Claude Code plugin that gives your agent a drink. `/drunken-claude:drink <name>`
+raises its intoxication level and its tone gets progressively more unhinged -
+rambling, typos, ALL CAPS, tangents, emoji spam. `/drunken-claude:sober-up`
+brings it back down.
 
 **The chaos is tonal only.** No matter how "drunk" Claude gets, code stays
 correct, facts stay accurate, and the actual task still gets done - it's just
@@ -18,15 +19,22 @@ claude plugin install drunken-claude@drunken-claude
 ## Usage
 
 ```
-/drink beer
-/drink tequila shot
-/sober-up
+/drunken-claude:drink beer
+/drunken-claude:drink tequila shot
+/drunken-claude:sober-up
 ```
+
+(Plugin commands are always namespaced as `/<plugin>:<command>` by Claude Code
+to avoid collisions between plugins - this isn't shortenable to a bare `/drink`.)
 
 Each `/drink` reports the new level and tier name. Level is stored per-project
 in `.drunken-claude-state.json` and persists across the whole session until you
 sober up. It's local, per-user session state, so you'll probably want to add
 `.drunken-claude-state.json` to your project's `.gitignore`.
+
+You'll see the underlying `Read`/`Write` tool calls in your terminal when you
+run these commands - that's normal Claude Code transparency for any command
+that touches files, not something this plugin can or should hide.
 
 ## Tiers
 

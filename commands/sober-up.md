@@ -3,7 +3,7 @@ description: Start bringing Claude's intoxication level back down toward sober.
 allowed-tools: Read, Write
 ---
 
-The user just ran `/sober-up`.
+The user just ran `/drunken-claude:sober-up`.
 
 1. Read `.drunken-claude-state.json` in the project root. If it doesn't exist
    or `level` is already 0, respond briefly (normal tone) that Claude is
@@ -16,5 +16,6 @@ The user just ran `/sober-up`.
    tier: short sentences, groggy, a little apologetic, low energy. State the
    new level and tier name plainly (e.g. "Level 1/10 - Buzzed").
 
-4. Starting next turn, resume the tier voice matching `new_level` per the
-   `drunken-claude` skill (or fully normal tone if `new_level` is 0).
+4. Starting next turn, resume the tier voice matching `new_level` per
+   `reference/tone-rules.md` in this plugin (or fully normal tone if
+   `new_level` is 0).

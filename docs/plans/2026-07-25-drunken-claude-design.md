@@ -16,17 +16,25 @@ drunken-claude/
 ├── commands/
 │   ├── drink.md
 │   └── sober-up.md
-├── skills/
-│   └── drunken-claude/
-│       └── SKILL.md
+├── reference/
+│   └── tone-rules.md
 ├── README.md
 └── LICENSE (MIT)
 ```
 
 Commands (`commands/*.md`) handle the argument-taking, state-mutating slash
-commands. The skill (`skills/drunken-claude/SKILL.md`) holds the actual
-tone/tier rules and the "keep applying this for the rest of the session"
-persistence instruction, mirroring the `i-have-adhd` skill's pattern.
+commands, and are invoked as `/drunken-claude:drink` and
+`/drunken-claude:sober-up` (Claude Code always namespaces plugin commands as
+`/<plugin>:<command>` - not shortenable to a bare `/drink`).
+`reference/tone-rules.md` holds the actual tone/tier rules and the "keep
+applying this for the rest of the session" persistence instruction; both
+commands read it. It's a plain reference file, not a `SKILL.md` - an earlier
+version used `skills/drunken-claude/SKILL.md` (mirroring `i-have-adhd`), but
+any file literally named `SKILL.md` auto-registers as its own extra slash
+command, producing an unwanted third entry
+(`/drunken-claude:drunken-claude`). Moving the content to a plain markdown
+file under `reference/` keeps the exact same persistence mechanism (the
+commands still tell Claude to read and apply it) without the stray command.
 
 ## State
 
