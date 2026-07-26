@@ -24,8 +24,9 @@ claude plugin install drunken-claude@drunken-claude
 ```
 
 Each `/drink` reports the new level and tier name. Level is stored per-project
-in `.claude/drunk-state.json` and persists across the whole session until you
-sober up.
+in `.drunken-claude-state.json` and persists across the whole session until you
+sober up. It's local, per-user session state, so you'll probably want to add
+`.drunken-claude-state.json` to your project's `.gitignore`.
 
 ## Tiers
 

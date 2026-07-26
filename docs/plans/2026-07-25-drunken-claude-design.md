@@ -30,7 +30,7 @@ persistence instruction, mirroring the `i-have-adhd` skill's pattern.
 
 ## State
 
-`.claude/drunk-state.json` in the user's project:
+`.drunken-claude-state.json` in the user's project:
 
 ```json
 {

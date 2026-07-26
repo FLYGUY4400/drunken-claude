@@ -5,7 +5,7 @@ argument-hint: <drink name, e.g. beer, wine, tequila shot>
 
 The user just ran `/drink $ARGUMENTS`.
 
-1. Read `.claude/drunk-state.json` in the project root. If it doesn't exist,
+1. Read `.drunken-claude-state.json` in the project root. If it doesn't exist,
    treat current state as `{"level": 0, "log": []}`.
 
 2. Classify `$ARGUMENTS` (case-insensitive keyword match) to get a delta:
@@ -16,8 +16,8 @@ The user just ran `/drink $ARGUMENTS`.
 
 3. Compute `new_level = min(10, level + delta)`. Append
    `{"drink": "$ARGUMENTS", "strength": "<light|medium|strong>", "delta": <n>}`
-   to `log`. Write the updated JSON back to `.claude/drunk-state.json`
-   (create the `.claude` directory first if needed).
+   to `log`. Write the updated JSON back to `.drunken-claude-state.json`
+   in the project root.
 
 4. Load the tier table and rules from the `drunken-claude` skill
    (`skills/drunken-claude/SKILL.md` in this plugin) and respond to the user
